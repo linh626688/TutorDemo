@@ -1,0 +1,32 @@
+<ion-view view-title="Danh sách tin nhắn">
+  <ion-content>
+    <div class="item item-divider">
+      Tất cả các tin nhắn
+    </div>
+    <div class="list" ng-repeat="mes in messageList">
+      <a href="#/app/list-messages/{{mes.id}}">
+        <div class="item item item-button-right">
+          {{mes.email}}
+          <button class="button button-balanced ink">
+            <i class="icon ion-archive"></i>
+          </button>
+        </div>
+      </a>
+    </div>
+    <div>
+      <div class="item item-divider">
+        Tin nhắn lưu ý
+      </div>
+      <div class="list" ng-repeat="mes in messageList2">
+        <a href="#/app/list-messages/{{mes.id}}">
+          <div class="item item item-button-right">
+            {{mes.email}}
+            <button class="button button-balanced ink">
+              <i class="icon ion-star"></i>
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

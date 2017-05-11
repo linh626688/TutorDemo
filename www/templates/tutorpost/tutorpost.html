@@ -1,0 +1,40 @@
+<ion-view view-title="Chi Tiết Gia Sư">
+  <ion-content>
+    <a class="list card stable-bg">
+      <div class="item item-avatar">
+        <img src="{{postDetail.imagePost}}">
+        <h2> Họ tên : {{postDetail.tutor.name}}<br></h2>
+        <h2> Ngày Sinh : {{postDetail.tutor.birth}}</h2>
+        <h2> Công Việc hiện tại : {{postDetail.tutor.currentJob}}</h2>
+      </div>
+      <div class="item item-body">
+        <a class="item item-icon-left">
+          <i class="icon ion-university"></i>Môn Học : {{postDetail.subject}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-clock"></i>Thời Gian : {{postDetail.times}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-ios-cloud-upload"></i> Thời điểm đăng bài : {{postDetail.timePost}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-card"></i> Lương mong muốn : {{postDetail.salaryDesired}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-ios-book"></i> Trình độ lớp : {{postDetail.classLevel}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-ios-location"></i> Vị trí giảng dậy : {{postDetail.locationDesired}}
+        </a>
+        <h2 class="item item-icon-left">
+          <i class="icon ion-information-circled"></i> Thông tin thêm : {{postDetail.about}}
+        </h2>
+      </div>
+    </a>
+    <button class="button" ng-click="editPost()" ng-if="user"> Sửa thông tin lớp</button>
+    <button class="button" ng-click="deletePost() " ng-if="user"> Xóa lớp học này</button>
+    <button class="button" ng-click="tocreateMessage() " ng-if="!user"> Gửi tin nhắn cho Gia Sư này </button>
+
+  </ion-content>
+</ion-view>
+

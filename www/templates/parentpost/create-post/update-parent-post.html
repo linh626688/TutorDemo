@@ -1,0 +1,42 @@
+<ion-view view-title="Tạo Lớp học (Cần Gia Sư)">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Môn học</span>
+        <input type="text" placeholder="Môn Học Yêu Cầu " ng-model="postDetail.subject">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Cấp độ</span>
+        <input type="text" placeholder="Trình độ học sinh" ng-model="postDetail.classLevel">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Lương Mong Muốn </span>
+        <input type="text" placeholder="Lương Mong Muốn" ng-model="postDetail.salaryDesired">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Thời gian</span>
+        <input type="text" placeholder="Thời gian lên lớp (Thứ 2 / 18h-20h)" ng-model="postDetail.times">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Địa chỉ lớp</span>
+        <input type="text" placeholder="Địa chỉ của lớp cần Gia sư " ng-model="postDetail.locationDesired">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Số Buổi Trong Tuần</span>
+        <input type="text" placeholder="Số buổi học" ng-model="postDetail.period">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Liên Lạc </span>
+        <input type="text" placeholder="Liên Lạc" ng-model="postDetail.contact">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Yêu Cầu thêm </span>
+        <input type="text" placeholder="Trình độ, kinh nghiệm,... của gia sư" ng-model="postDetail.classRequirement">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <button class="button" ng-click="createPostParent()"> Tạo Bài Đăng </button>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

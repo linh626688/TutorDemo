@@ -1,0 +1,21 @@
+<script src="tutor-posts.js"></script>
+<ion-view view-title="Danh Sách Gia Sư">
+  <ion-content>
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-list class="animate-ripple">
+      <ion-item ng-repeat="post in postTutors |  orderBy:'-id'">
+        <a class="list card stable-bg" href="#/app/tutor-posts/{{post.id}}">
+          <div class="item item-thumbnail-left">
+            <img src="{{post.imagePost}}">
+            <h2> Họ tên: {{post.tutor.name}}<br></h2>
+            <h2> Ngày sinh: {{post.tutor.birth}}</h2>
+            <h2> Hiện tại là: {{post.tutor.currentJob}}</h2>
+          </div>
+        </a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

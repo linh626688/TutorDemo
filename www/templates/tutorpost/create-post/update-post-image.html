@@ -1,0 +1,32 @@
+<ion-view view-title="Thêm ảnh cho Gia Sư">
+  <ion-content>
+    <div class="item item-avatar">
+      <img src="{{postDetail.imagePost}}">
+      <h2> Họ tên : {{postDetail.tutor.name}}<br></h2>
+      <h2> Công Việc hiện tại : {{postDetail.tutor.currentJob}}</h2>
+      <h2> Môn: {{postDetail.subject}} <br></h2>
+      <h2> Ngày Sinh : {{postDetail.tutor.birth}}</h2>
+      <h2> Khu Vực : {{postDetail.locationDesired}}</h2>
+      <h2> Cấp Độ lớp : {{postDetail.classLevel}}</h2>
+      <h2> Thời gian : {{postDetail.times}} </h2>
+      <h2> Vị Trí :{{postDetail.salaryDesired}} </h2>
+      <h2> Thông Tin : {{postDetail.about}}</h2>
+
+    </div>
+    <div class="item item-body">
+
+      <div class="button-bar">
+        <button class="button icon-left ion-camera" ng-click="loadImage()">Chọn Ảnh </button>
+        <button class="button icon-left ion-upload" ng-click="uploadImage()" ng-disabled="image === null">Tải Lên
+        </button>
+        <button class="button icon-left ion-android-delete" ng-click="deletePost()"> Hủy</button>
+
+      </div>
+
+      <div class="item item-image">
+        <img src="{{ pathForImage(image) }}">
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+<script src="login-controller.js"></script>
+<ion-view view-title="Đăng Nhập" id="welcome-view">
+  <ion-content >
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="logo-welcome"></div>
+    <div class="login-btns" ng-if="!user">
+      <hr id="login-divider"/>
+      <div  >
+        <br>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Username</span>
+            <input type="text" ng-model="loginData.username">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Password</span>
+            <input type="password" ng-model="loginData.password">
+          </label>
+          <label class="item">
+            <button class="button button-block button-positive" ng-click="loginUser()">Đăng Nhập</button>
+          </label>
+          <label class="item">
+            <button class="button button-block button-positive" ng-click="toRegister()">Đăng Ký</button>
+          </label>
+        </div>
+      </div>
+      <div id="social-links">
+        <ul>
+          <li ng-click="loginfb()"><span class="ifacebook"><img src="img/social-icons/facebook.png"></span><a class="afacebook">Đăng nhập với Facebook</a></li>
+        </ul>
+        <!--<ul>-->
+          <!--<li ng-click="showLogOutMenu()"><span class="ifacebook"><img src="img/social-icons/facebook.png"></span><a class="afacebook">Logout Facebook</a></li>-->
+        <!--</ul>-->
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

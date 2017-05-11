@@ -1,0 +1,32 @@
+<ion-view view-title="Sửa Bài Đăng">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Nhận Môn</span>
+        <input type="text" value="{{postDetail.subject}}" ng-model="edit.subject">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Cấp độ</span>
+        <input type="text" placeholder="{{postDetail.classLevel}}" ng-model="edit.classLevel">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Lương yêu cầu </span>
+        <input type="text" placeholder="{{postDetail.salaryDesired}}" ng-model="edit.salaryDesired">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Thời gian</span>
+        <input type="text" placeholder="{{postDetail.times}}" ng-model="edit.times">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Khu vực Giảng dậy</span>
+        <input type="text" placeholder="{{postDetail.locationDesired}}" ng-model="edit.locationDesired">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Chú thích</span>
+        <input type="text" placeholder="{{postDetail.about}}" ng-model="edit.about">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <button class="button" ng-click="editPostTutor()"> Cập Nhật </button>
+      </label>
+  </ion-content>
+</ion-view>

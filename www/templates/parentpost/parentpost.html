@@ -1,0 +1,36 @@
+<ion-view view-title="Chi Tiết Lớp Học">
+  <ion-content>
+    <div class="list card stable-bg">
+      <div class="item item-body">
+        <a class="item item-icon-left">
+          <i class="icon ion-information-circled"></i> {{postDetail.classRequirement}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-university"></i> {{postDetail.subject}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-android-contact"></i> {{postDetail.contact}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-card"></i> {{postDetail.salaryDesired}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-ios-book"></i> {{postDetail.classLevel}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-ios-location"></i> {{postDetail.locationDesired}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-loop"></i> {{postDetail.period}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-university"></i> {{postDetail.times}}
+        </a>
+
+      </div>
+    </div>
+
+    <button class="button" ng-click="updatePostParent()" ng-if="user" > Sửa thông tin lớp </button>
+    <button class="button" ng-click="deletePostParent()" ng-if="user" > Xóa lớp học này  </button>
+  </ion-content>
+</ion-view>

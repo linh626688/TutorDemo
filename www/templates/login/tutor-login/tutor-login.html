@@ -1,0 +1,29 @@
+<ion-view view-title="Cập Nhật Gia Sư">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Họ Và Tên</span>
+        <input type="text" placeholder="Lê Văn A" ng-model="input.name">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Ngày Sinh</span>
+        <input type="text" placeholder="20/05/1995" ng-model="input.birth">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Công Việc Hiện Tại</span>
+        <input type="text" placeholder="Giáo Viên / Sinh viên" ng-model="input.job">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Vi trí</span>
+        <input type="text" placeholder="Khu Vực Giảng Dậy" ng-model="input.area">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <button class="button" ng-click="updateTutor()"> Cập Nhật</button>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <button class="button" ng-click="cancelUpdate()"> Hủy</button>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<script src="update-tutor-post.js"></script>
+<ion-view view-title="Cập Nhật Chi Tiết Gia Sư">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Nhận Môn</span>
+        <input type="text" placeholder="Môn Học Nhận dậy (Toán , Vắn, ...)" ng-model="postDetail.subject">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Cấp độ</span>
+        <input type="text" placeholder="Trình độ học sinh" ng-model="postDetail.classLevel">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Lương yêu cầu </span>
+        <input type="text" placeholder="Lương Mong Muốn" ng-model="postDetail.salaryDesired">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Thời gian</span>
+        <input type="text" placeholder="Thời gian lên lớp (Thứ 2 / 18h-20h)" ng-model="postDetail.times">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Khu vực Giảng dậy</span>
+        <input type="text" placeholder="Khu Vực Nhận Lớp " ng-model="postDetail.locationDesired">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Chú thích</span>
+        <input type="text" placeholder="Thông tin thêm" ng-model="postDetail.about">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <button class="button" ng-click="createPostTutor()"> Tạo Bài Đăng </button>
+      </label>
+    </div>
+
+  </ion-content>
+</ion-view>

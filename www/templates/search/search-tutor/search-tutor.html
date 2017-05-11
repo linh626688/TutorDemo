@@ -1,0 +1,66 @@
+<ion-view view-title="Tìm Lớp Xung Quanh">
+  <ion-content>
+    <div id="map_canvas">
+      <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options">
+        <ui-gmap-marker idkey="marker.id" coords="marker.coords" options="marker.options">
+          <marker animation="DROP" position="current-location"></marker>
+        </ui-gmap-marker>
+        <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" options ="m.options" idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Điền Vị Trí</span>
+          <input type="text" placeholder="Xã-Phố, Huyện-Phường, Quận , Tỉnh" ng-model="input.location">
+        </label>
+        <label class="item-input item-select">
+          <div class="input-label">
+            Khoảng Cách
+          </div>
+          <select ng-model="input.distance">
+            <option ng-repeat="option in distances" value="{{option.value}}">{{option.name}}</option>
+          </select>
+
+        </label>
+        <label class="item item-input item-stacked-label">
+          <button class="button" ng-click="searchTutor()"> Tìm Kiếm với vị trí nhập vào</button>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <button class="button" ng-click="searchCurrentParrentLocation()"> Tìm Kiếm với vị trí hiện tại</button>
+        </label>
+      </div>
+      <ion-list class="animate-ripple">
+        <ion-item ng-repeat="post in resultPosts.data">
+          <div class="list card stable-bg">
+            <div class="item item-body">
+              <a class="item item-icon-left">
+                <i class="icon ion-information-circled"></i> {{post.classRequirement}}
+              </a>
+              <a class="item item-icon-left">
+                <i class="icon ion-university"></i> {{post.subject}}
+              </a>
+              <a class="item item-icon-left">
+                <i class="icon ion-android-contact"></i> {{post.contact}}
+              </a>
+              <a class="item item-icon-left">
+                <i class="icon ion-card"></i> {{post.salaryDesired}}
+              </a>
+              <a class="item item-icon-left">
+                <i class="icon ion-ios-book"></i> {{post.classLevel}}
+              </a>
+              <a class="item item-icon-left">
+                <i class="icon ion-ios-location"></i> {{post.locationDesired}}
+              </a>
+              <a class="item item-icon-left">
+                <i class="icon ion-loop"></i> {{post.period}}
+              </a>
+              <a class="item item-icon-left">
+                <i class="icon ion-university"></i> {{post.times}}
+              </a>
+
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

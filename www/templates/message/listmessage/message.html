@@ -1,0 +1,24 @@
+<ion-view view-title="Chi Tiết Tin Nhắn">
+  <ion-content>
+    <div class="list card stable-bg">
+      <h2 class="item item-icon-left">
+        <i class="icon ion-email"></i> {{messageDetail.email}}
+      </h2>
+      <h2 class="item item-icon-left">
+        <i class="icon ion-ios-telephone-outline"></i> {{messageDetail.contact}}
+      </h2>
+      <h2 class="item item-icon-left">
+        <i class="icon ion-clock"></i> {{messageDetail.timeSend}}
+      </h2>
+      <h2>Nội Dung</h2>
+      <div class="item item-body">
+        {{messageDetail.detailRequest}}
+      </div>
+    </div>
+    <button class="button" ng-click="addStateMessage()" ng-if="!statemess"> Thêm Vào Tin Nhắn Lưu
+      Ý
+    </button>
+
+    <button class="button" ng-click="deleteMessage()">Xóa Tin Nhắn Này</button>
+  </ion-content>
+</ion-view>

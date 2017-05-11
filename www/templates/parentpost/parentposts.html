@@ -1,0 +1,41 @@
+<ion-view view-title="Danh sách các lớp cần Gia Sư">
+  <ion-content>
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-list class="animate-ripple">
+      <ion-item ng-repeat="post in postParents |  orderBy:'-id'"  href="#app/parent-posts/{{post.id}}" >
+        <div class="list card stable-bg">
+          <div class="item item-body">
+            <a class="item item-icon-left">
+              <i class="icon ion-information-circled"></i> {{post.classRequirement}}
+            </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-university"></i> {{post.subject}}
+            </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-android-contact"></i> {{post.contact}}
+            </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-card"></i> {{post.salaryDesired}}
+            </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-ios-book"></i> {{post.classLevel}}
+            </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-ios-location"></i> {{post.locationDesired}}
+            </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-loop"></i> {{post.period}}
+            </a>
+            <a class="item item-icon-left">
+              <i class="icon ion-university"></i> {{post.times}}
+            </a>
+
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

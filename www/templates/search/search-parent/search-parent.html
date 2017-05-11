@@ -1,0 +1,45 @@
+<ion-view view-title="Tìm Gia Sư Xung Quanh">
+  <ion-content>
+    <div id="map_canvas">
+      <ui-gmap-google-map center="map.center" zoom="map.zoom">
+        <ui-gmap-marker idkey="marker.id" coords="marker.coords" options="marker.options">
+          <marker animation="DROP" position="current-location"></marker>
+        </ui-gmap-marker>
+        <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" options ="m.options" idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Điền Vị Trí</span>
+          <input type="text" placeholder="Xã-Phố, Huyện-Phường, Quận , Tỉnh" ng-model="input.location">
+        </label>
+        <label class="item-input item-select">
+          <div class="input-label">
+            Khoảng Cách
+          </div>
+          <select ng-model="input.distance">
+            <option ng-repeat="option in distances" value="{{option.value}}" placeholder="xxxx">{{option.name}}</option>
+          </select>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <button class="button" ng-click="searchParent()"> Tìm Kiếm với vị trí nhập vào</button>
+        </label>
+      </div>
+      <label class="item item-input item-stacked-label">
+        <button class="button" ng-click="searchCurrentLocation()"> Tìm Kiếm với vị trí hiện tại</button>
+      </label>
+      <ion-list class="animate-ripple">
+        <ion-item ng-repeat="post in resultPosts.data">
+          <a class="list card stable-bg" href="#/app/tutor-posts/{{post.id}}">
+            <div class="item item-thumbnail-left">
+              <img src="{{post.imagePost}}">
+              <h2>{{post.tutor.name}}<br></h2>
+              <h2>{{post.tutor.birth}}</h2>
+              <h2>{{post.tutor.currentJob}}</h2>
+            </div>
+          </a>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

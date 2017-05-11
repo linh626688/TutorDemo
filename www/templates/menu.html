@@ -1,0 +1,60 @@
+
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button class="no-text">
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <button id="fab" class="button button-positive button-fab button-fab-bottom-right">
+      <i class="icon ion-social-twitter"></i>
+    </button>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-header-bar class="expanded">
+      <img src="img/logoTutorAround.png">
+      <div class="menu-bottom">
+      </div>
+    </ion-header-bar>
+    <ion-content class="stable-bg has-expanded-header">
+      <ion-list>
+        <ion-item menu-close href="#/app/login" ng-if="!user">
+          Đăng Nhập
+        </ion-item>
+        <ion-item menu-close href="#/app/tutor-posts">
+          Danh Sách Các Gia Sư
+        </ion-item>
+        <ion-item menu-close href="#/app/parent-posts">
+          Danh sách Các Lớp Học
+        </ion-item>
+        <ion-item menu-close href="#/app/list-messages" ng-if="user">
+          Tin Nhắn Yêu Cầu
+        </ion-item>
+        <ion-item menu-close href="#/app/tutor-update"  ng-if="user">
+          Thêm Thông tin Cho Gia Sư
+        </ion-item>
+        <ion-item menu-close href="#/app/parent-update"  ng-if="user">
+          Thêm Thông tin Cho Lớp Học
+        </ion-item>
+        <ion-item menu-close href="#/app/update-tutor-post" ng-if="user">
+          Tạo Bài Đăng Cho Gia Sư
+        </ion-item>
+        <ion-item menu-close href="#/app/update-parent-post"  ng-if="user">
+          Tạo Bài Đăng Cho Lớp Học
+        </ion-item>
+        <ion-item menu-close href="#/app/search-tutor">
+          Tìm Lớp Theo Vị trí
+        </ion-item>
+        <ion-item menu-close href="#/app/search-parent" >
+          Tìm Gia Sư Theo Vị trí
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

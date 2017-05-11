@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+    <!--<script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>-->
+    <!--<script src="https://rawgit.com/lodash/lodash/3.10.1/lodash.min.js"></script>-->
+    <!--<script src="https://rawgit.com/nmccready/angular-simple-logger/master/dist/angular-simple-logger.js"></script>-->
+    <!--<script src="https://rawgit.com/angular-ui/angular-google-maps/master/dist/angular-google-maps.min.js"></script>-->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/social-icons.css" rel="stylesheet">
+    <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet"/>
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+    <script src='lib/lodash/dist/lodash.min.js'></script>
+    <script src='lib/angular/angular.min.js'></script>
+    <script src='lib/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+    <script src='lib/angular-google-maps/dist/angular-google-maps.js'></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/app.run.js"></script>
+    <script src="templates/parentpost/parent-post.js"></script>
+    <script src="templates/parentpost/parent-posts.js"></script>
+    <script src="templates/parentpost/parent-post.service.js"></script>
+    <script src="templates/tutorpost/tutor-post.service.js"></script>
+    <script src="templates/tutorpost/tutor-post.js"></script>
+    <script src="templates/tutorpost/tutor-posts.js"></script>
+    <script src="templates/login/login-controller.js"></script>
+    <script src="templates/login/servicefb.js"></script>
+    <script src="templates/login/register.js"></script>
+    <script src="templates/user/user.js"></script>
+    <script src="templates/user/tutor/tutors.js"></script>
+    <script src="templates/user/tutor/tutor.js"></script>
+    <script src="templates/tutorpost/create-post/update-tutor-post.js"></script>
+    <script src="templates/tutorpost/edit-tutor-post.js"></script>
+    <script src="templates/parentpost/create-post/update-parent-post.js"></script>
+    <script src="templates/parentpost/edit-parent-post.js"></script>
+    <script src="templates/search/search-parent/search-parent.js"></script>
+    <script src="templates/search/search-parent/search-parent.service.js"></script>
+    <script src="templates/search/search-tutor/search-tutor.js"></script>
+    <script src="templates/search/search-tutor/search-tutor.service.js"></script>
+    <script src="templates/search/get-position/get-position.js"></script>
+    <script src="templates/login/oauth.service.js"></script>
+    <script src="templates/login/parent-login/parent-login.js"></script>
+    <script src="templates/login/tutor-login/tutor-login.js"></script>
+    <script src="templates/user/parent/parents.js"></script>
+    <script src="templates/message/listmessage/message.js"></script>
+    <script src="templates/message/listmessage/messages.js"></script>
+    <script src="templates/message/createmessage/create-message.js"></script>
+    <script src="templates/message/message.service.js"></script>
+    <script src="js/motion.service.js"></script>
+</head>
+
+<body ng-app="app">
+<ion-nav-view></ion-nav-view>
+</body>
+</html>

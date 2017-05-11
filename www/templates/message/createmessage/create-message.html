@@ -1,0 +1,21 @@
+<ion-view view-title="Tạo tin nhắn">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Nhập Email của bạn</span>
+        <input type="text" placeholder="linh626688@gmail.com" ng-model="message.email">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Nhập Số Điện Thoại</span>
+        <input type="text" placeholder="0989898989" ng-model="message.contact">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Chi tiết tin nhắn</span>
+        <input type="text" placeholder="môn học, thời gian, học phí,..." ng-model="message.detailRequest">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <button class="button" ng-click="sendMessage()"> Gửi Tin Nhắn </button>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>
